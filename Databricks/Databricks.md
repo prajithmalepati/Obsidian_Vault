@@ -1,4 +1,4 @@
-- Databricks is a unified, open analytics platform for building, deploying, sharing, and maintaining enterprise-grade data, analytics, and AI solutions at scale. The Databricks Data Intelligence Platform integrates with cloud storage and security in your cloud account, and manages and deploys cloud infrastructure on your behalf.
+-  Databricks is a unified, open analytics platform for building, deploying, sharing, and maintaining enterprise-grade data, analytics, and AI solutions at scale. The Databricks Data Intelligence Platform integrates with cloud storage and security in your cloud account, and manages and deploys cloud infrastructure on your behalf.
 - Databricks was founded in 2013 by the original creators of the **Apache spark**, **Delta lake** and **mlflow**
 - Databricks offers a powerful suite of tools specifically geared towards data engineers, allowing them to build, manage, and deploy complex data pipelines and solutions.
 
@@ -22,5 +22,20 @@
 
 
 ### [[Unity Catalog]]
+
+
+
+
+
+- Databricks has two main task orchestration services
+	- [[Workflows]] Jobs (Workflows)
+		- workflows for every job
+		- workflows is the service for orchestrating all types of tasks. In other words it can orchestrate any combination of Notebooks, SQL, Spark, ML Model and DLT(Delta Live Tables)
+	- [[Delta Live Tables (DLT)]]
+		- Automated data pipelines for Delta Lake
+		- DLT are designed for data teams to easily create batch and streaming data pipelines using python or SQL 
+
+>DLT pipeline can be a task in a workflow
+
 
 
