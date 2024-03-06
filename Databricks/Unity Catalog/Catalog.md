@@ -1,0 +1,4 @@
+- A catalog is the first layer of Unity Catalog’s three-level namespace. It’s used to organize your data assets. Users can see all catalogs on which they have been assigned the `USE CATALOG` [data permission](https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/index.html).
+
+- Depending on how your workspace was created and enabled for Unity Catalog, your users may have default permissions on automatically provisioned catalogs, including either the `main` catalog or the _workspace catalog_ (`<workspace-name>`). For more information, see [Default user privileges](https://docs.databricks.com/en/data-governance/unity-catalog/get-started.html#default-privileges).
+- 

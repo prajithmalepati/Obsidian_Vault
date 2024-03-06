@@ -1,0 +1,4 @@
+
+- A schema (also called a database) is the second layer of Unity Catalog’s three-level namespace. A schema organizes tables and views. Users can see all schemas on which they have been assigned the `USE SCHEMA` permission, along with the `USE CATALOG` permission on the schema’s parent catalog. To access or list a table or view in a schema, users must also have `SELECT` permission on the table or view.
+
+- If your workspace was enabled for Unity Catalog manually, it includes a default schema named `default` in the `main` catalog that is accessible to all users in your workspace. If your workspace was enabled for Unity Catalog automatically and includes a `<workspace-name>` catalog, that catalog contains a schema named `default` that is accessible to all users in your workspace.
