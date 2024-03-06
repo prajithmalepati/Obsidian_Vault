@@ -1,2 +1,6 @@
 # Obsidian_Vault
-Notes
+
+- Made notes in Obsidian
+- Pyspark and Databricks for now
+
+
