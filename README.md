@@ -3,4 +3,7 @@
 - Made notes in Obsidian
 - Pyspark and Databricks for now
 
+### Author
+
+- Prajith Malepati
 
