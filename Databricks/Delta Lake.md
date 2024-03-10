@@ -12,7 +12,7 @@ So to address this issues they developed Delta Lake
 - Leverages Apache Parquet for efficient data storage and retrieval.
 - Introduces **[[ACID]]** transactions to ensure data consistency and reliability during writes and updates.
 	- **Atomicity** - means all transactions either succeed or fail completely
-		- This ensures all changes in a transaction are recorded entirely, or none are recorded at all. If something fails mid-transaction, Delta Lake rolls back all changes, leaving the data unaltered. Imagine this as an all-or-nothing principle.
+		- Ensures that all changes in a transaction are recorded, or none are. If a transaction fails at any point, all changes made during the transaction are rolled back, and the data remains unaltered. This property is crucial for maintaining data integrity during operations
 	- **Consistency** - guarantees relate to how a given state of the data is observed by simultaneous operations
 	- **Isolation** - refers to how simultaneous operations conflict with one another. The isolation guarantees that Delta Lake provides do differ from other systems
 	- **Durability** - means that committed changes are permanent
