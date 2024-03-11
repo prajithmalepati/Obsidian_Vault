@@ -48,4 +48,22 @@ SELECT *
 FROM STUDENTS VERSION AS OF 3 
 ```
 
-> With time travel we are not recreating a previous state of the table by undoing transactions against out current version; rather we're just querying all those data files that were indicated as valid as of the specified 
+> **Something to keep in Mind**                                                                                                With time travel we are not recreating a previous state of the table by undoing transactions against out current version; rather we're just querying all those data files that were indicated as valid as of the specified version.
+
+- you can also `RESTORE` a table if you accidentally deleted it. 
+
+```SQL
+RESTORE TABLE STUDENTS TO VERSION AS OF 8
+```
+
+- `RESTORE` is considered a transaction and can be seen in the `DESCRIBE HISTORY`.
+
+- So keeping all the data files for all the versions would be a very expensive task. So we can manually purge the old files that we don't need using `VACUUM`
+- By default `VACUUM` will prevent you from deleting files less that 7 days old.
+- we can still bypass this prevention but its not recommended.
+
+```SQL
+VACUUM STUDENTS RETAIN 240 HOURS
+-- We are deleting everything that is older than 10 days
+```
+
