@@ -29,3 +29,7 @@ So to address this issues they developed Delta Lake
 - **Simplified data management:** Streamlines updates and data lineage tracking through features like time travel and schema enforcement.
 - **Faster data processing:** Leverages Parquet format for efficient data access and query performance.
 - **Unified platform:** Integrates seamlessly with other Databricks services like Spark and Structured Streaming for a cohesive data processing environment.
+
+
+### Load Data into Delta tables
+
