@@ -44,6 +44,6 @@
 ![[Dataobjects.png]]
 
 
-#### Managed Table
 
-- A Managed table is based on a file that is stored in Managed st
+- **Managed Table:** A Managed table is based on a file that is stored in Managed store's location that is configured to Metastore. So when you drop a table, it will delete the table and its underlying data
+- **External table:** An External table is a table whose datafile is stored in a cloud storage location, outside of the managed storage location. So only the table meta data is managed. When you drop a table, only the table gets deleted and all the underlying data remains.
