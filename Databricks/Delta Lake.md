@@ -36,4 +36,16 @@ So to address this issues they developed Delta Lake
 - we can either set up a delta table or  load data into a delta table using **CTAS (`CREATE TABLE AS SELECT`)** or **CRAS (`CREATE OR REPLACE TABLE AS SELECT`)**.
 - By default, **managed** tables in a schema without the location specified will be created in the **`dbfs:/user/hive/warehouse/<schema_name>.db/`** directory.
 - If you drop a managed table, The table's `directory` and its `log` and data files are deleted. Only the `schema (database)` directory remains.
-- 
+
+### Version, optimize and zorder
+
+- use `DESCRIBE HISTORY` to see all the versions available
+- `OPTIMIZE` will create a new version.
+- The time travel queries can be performed by either specifying the integer version or a timestamp.
+
+```SQL
+SELECT *
+FROM STUDENTS VERSION AS OF 3 
+```
+
+> With time travel we are not recreating a previous state of the table by undoing transactions against out current version; rather we're just querying all those data files that were indicated as valid as of the specified 
