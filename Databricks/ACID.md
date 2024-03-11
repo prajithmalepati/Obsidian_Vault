@@ -1,6 +1,10 @@
 
 
- **Atomicity** - means all transactions either succeed or fail completely
+ **Atomicity** - means all transactions either succeed or fail completely.
+- In Delta Lake, write operations (inserts, updates, and deletes) are atomic, meaning they either succeed completely or fail completely.
+- If a write operation fails, Delta Lake ensures that the data remains unchanged, and the partially written data is not visible to readers.
+- This guarantees that the data lake is always in a consistent state, even in the presence of failures or interruptions.
+- Delta Lake achieves this by using a `transaction log` that records every change.
  **Consistency** - guarantees relate to how a given state of the data is observed by simultaneous operations
  **Isolation** - refers to how simultaneous operations conflict with one another. The isolation guarantees that Delta Lake provides do differ from other systems
  **Durability** - means that committed changes are permanent 
