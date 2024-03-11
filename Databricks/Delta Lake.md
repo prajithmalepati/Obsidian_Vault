@@ -66,4 +66,16 @@ RESTORE TABLE STUDENTS TO VERSION AS OF 8
 VACUUM STUDENTS RETAIN 240 HOURS
 -- We are deleting everything that is older than 10 days
 ```
+- We can use `DRY RUN` to print out all the records that would be deleted.
+
+```SQL
+VACUUM STUDENTS RETAIN 240 HOURS DRY RUN
+```
+
+- To bypass the 7 day limit , we can use the following. **(Not Recommended)**
+
+```SQL
+SET spark.databricks.delta.retentionDurationCheck.enabled = false;
+SET spark.databricks.delta.vacuum.logging.enabled = true;
+```
 
