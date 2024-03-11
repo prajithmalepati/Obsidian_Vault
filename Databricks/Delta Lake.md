@@ -33,3 +33,7 @@ So to address this issues they developed Delta Lake
 
 ### Load Data into Delta tables
 
+- we can either set up a delta table or  load data into a delta table using **CTAS (`CREATE TABLE AS SELECT`)** or **CRAS (`CREATE OR REPLACE TABLE AS SELECT`)**.
+- By default, **managed** tables in a schema without the location specified will be created in the **`dbfs:/user/hive/warehouse/<schema_name>.db/`** directory.
+- If you drop a managed table, The table's `directory` and its `log` and data files are deleted. Only the `schema (database)` directory remains.
+- 
