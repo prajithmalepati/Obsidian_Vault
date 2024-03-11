@@ -39,3 +39,11 @@
 
 
 
+### Data Objects in the lakehouse
+
+![[Dataobjects.png]]
+
+
+#### Managed Table
+
+- A Managed table is based on a file that is stored in Managed st
