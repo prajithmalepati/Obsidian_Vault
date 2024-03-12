@@ -28,3 +28,18 @@
 	- `dbutils.widgets.get(name)`: Retrieves the value of a widget.
 	- `dbutils.widgets.remove(name)`: Removes the widget with the specified name.
 	- `dbutils.widgets.removeAll()`: Removes all widgets.
+5. **Library Utilities (`dbutils.library`)**: Manages libraries in notebooks.
+	- `dbutils.library.install(path)`: Installs a library from the specified path.
+	- `dbutils.library.uninstall(name)`: Uninstalls a library with the given name.
+	- `dbutils.library.list()`: Lists the installed libraries.
+	- `dbutils.library.installPyPI(package, version=None, repo=None)`: Installs a Python package from PyPI.
+	- `dbutils.library.installMaven(coordinates, repo=None, exclusions=None)`: Installs a Maven library.
+	- `dbutils.library.restartPython()`: Restarts the Python interpreter, useful after installing libraries to ensure they're loaded.
+6. **Data`dbutils.data`:** This command provides utilities for working with data in Databricks.
+    
+    - `dbutils.data.summarize(df)`: Computes summary statistics for a DataFrame.
+    - `dbutils.data.validate(df, rules)`: Validates a DataFrame against a set of rules.
+7. **Jobs`dbutils.jobs`**: This command allows you to manage Databricks jobs.
+    
+    - `dbutils.jobs.run(job_id, arguments=None)`: Runs a job with the specified ID and optional arguments.
+    - `dbutils.jobs.cancel(run_id)`: Cancels a running job with the given run ID.
