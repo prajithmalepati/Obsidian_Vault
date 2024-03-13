@@ -36,6 +36,9 @@ So to address this issues they developed Delta Lake
 - we can either set up a delta table or  load data into a delta table using **CTAS (`CREATE TABLE AS SELECT`)** or **CRAS (`CREATE OR REPLACE TABLE AS SELECT`)**.
 - By default, **managed** tables in a schema without the location specified will be created in the **`dbfs:/user/hive/warehouse/<schema_name>.db/`** directory.
 - If you drop a managed table, The table's `directory` and its `log` and data files are deleted. Only the `schema (database)` directory remains.
+
+#### Overwrite
+
 - you can also overwrites to atomically replace all the table in a table. Usually doing it this way is much faster as it doesn't need to list the directory recursively or delete any files.
 	- Since overwrite is also a transaction, the old table can be still be accessed using `Time travel`
 	- It's an atomic transaction, so all the concurrent queries can still read the table while you are deleting the table
@@ -48,6 +51,9 @@ So to address this issues they developed Delta Lake
 			- can overwrite individual partitions.
 
 #### Append rows
+
+- you can use `INSERT INTO` to atomically append new rows to an existing data table. This allows for incremental updates to existing tables, which is more efficient than overwriting each time.
+- Note that insert into does not have any built in guarantees to prevent inserting same records multiple times. Re-executing the same command would add the same records to the target table, resulting in duplicate records
 ### Version, optimize and zorder
 
 - use `DESCRIBE HISTORY` to see all the versions available
