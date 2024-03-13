@@ -77,6 +77,8 @@ WHEN MATCHED AND a.email IS NULL AND b.email IS NOT NULL THEN
   UPDATE SET email = b.email, updated = b.updated
 WHEN NOT MATCHED THEN INSERT *
 ```
+
+
 ### Version, optimize and zorder
 
 - use `DESCRIBE HISTORY` to see all the versions available
