@@ -54,7 +54,7 @@ So to address this issues they developed Delta Lake
 
 - you can use `INSERT INTO` to atomically append new rows to an existing data table. This allows for incremental updates to existing tables, which is more efficient than overwriting each time.
 - Note that insert into does not have any built in guarantees to prevent inserting same records multiple times. Re-executing the same command would add the same records to the target table, resulting in duplicate records
-- This is where `MERGE INTO` comes into picture. `MERGE INTO` upserts from a source table, view or a dataframe into a Delta table using the `MERGE` SQL operation.
+- This is where `MERGE INTO` comes into picture. `MERGE INTO` upserts from a source table, view or a DataFrame into a Delta table using the `MERGE` SQL operation.
 - `MERGE INTO` updates, inserts and delete in a single transaction.
 - multiple conditionals can be added in addition to the matching fields.
 
