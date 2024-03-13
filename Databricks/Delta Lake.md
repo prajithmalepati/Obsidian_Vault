@@ -54,6 +54,29 @@ So to address this issues they developed Delta Lake
 
 - you can use `INSERT INTO` to atomically append new rows to an existing data table. This allows for incremental updates to existing tables, which is more efficient than overwriting each time.
 - Note that insert into does not have any built in guarantees to prevent inserting same records multiple times. Re-executing the same command would add the same records to the target table, resulting in duplicate records
+- This is where `MERGE INTO` comes into picture. `MERGE INTO` upserts from a source table, view or a dataframe into a Delta table using the `MERGE` SQL operation.
+- `MERGE INTO` updates, inserts and delete in a single transaction.
+- multiple conditionals can be added in addition to the matching fields.
+
+```SQL
+MERGE INTO target a
+USING source b
+ON {merge_condition}
+WHEN MATCHED THEN {matched_action}
+WHEN NOT MATCHED THEN {not_matched_action}
+
+-- Below, we'll only update records if the current row has a NULL email and the new row does not.
+
+-- All unmatched records from the new batch will be inserted.
+
+All unmatched records from the new batch will be inserted.
+MERGE INTO users a
+USING users_update b
+ON a.user_id = b.user_id
+WHEN MATCHED AND a.email IS NULL AND b.email IS NOT NULL THEN
+  UPDATE SET email = b.email, updated = b.updated
+WHEN NOT MATCHED THEN INSERT *
+```
 ### Version, optimize and zorder
 
 - use `DESCRIBE HISTORY` to see all the versions available
