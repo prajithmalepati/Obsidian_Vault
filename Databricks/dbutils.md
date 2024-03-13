@@ -2,8 +2,6 @@
 ### **Databricks utilities**
 
 
-
-
 1. **File System (`dbutils.fs`)**: Provides methods to manage files and directories in Databricks File System (DBFS). 
 	- `dbutils.fs.ls(path)`: Lists all files and directories at the specified path.
 	- `dbutils.fs.mv(sourcePath, destPath)`: Moves a file or directory from one location to another.
