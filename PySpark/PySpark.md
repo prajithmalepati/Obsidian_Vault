@@ -554,14 +554,15 @@ df_inner = df1.join(df2, on="key", how="inner") df_inner.show()
     - Non-matching rows from the left DataFrame will have `null` values.
 4. **Outer Join** (`'outer'` or `'full'` or `'full_outer'`):
     - Returns all rows from both DataFrames, combining the results of both left and right joins.
-    - Non-matching rows from both DataFrames will have `null` values.
-5. **Left Semi Join** (`'left_semi'`):
+    - Non-matching rows from both DataFrame will have `null` values.
+    - This is the same as UNION in SQL
+1. **Left Semi Join** (`'left_semi'`):
     - Returns only the rows from the left DataFrame where the key exists in the right DataFrame.
     - The result contains only columns from the left DataFrame.
-6. **Left Anti Join** (`'left_anti'`):
+2. **Left Anti Join** (`'left_anti'`):
     - Returns only the rows from the left DataFrame where the key does not exist in the right DataFrame.
     - The result contains only columns from the left DataFrame.
-7. **Cross Join** (`'cross'`):
+3. **Cross Join** (`'cross'`):
     - Returns the Cartesian product of both DataFrames, combining every row from the left DataFrame with every row from the right DataFrame.
     - It results in a DataFrame with a large number of rows, especially if the input DataFrames are large.
 
