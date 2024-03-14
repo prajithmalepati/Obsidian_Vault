@@ -36,6 +36,10 @@ Cluster policies can help to achieve the following:
 - Enforce correct tagging
 Only Admin users can Create, Edit and Delete a cluster policies and also have access to all policies
 
+### Cluster pools
+
+
+
 
 
 
