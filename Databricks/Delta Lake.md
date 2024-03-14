@@ -4,7 +4,7 @@
 -  Lacking strong data governance and [[ACID]] transactions, making data lineage and data integrity difficult to maintain.
 
 ### Delta Lake
-So to address this issues they developed Delta Lake
+So to address this issues they eveloped Delta Lake
 
 - Delta Lake is an open-source project that enables building a data [[Lakehouse]] on top of existing cloud storage
 - Delta Lake is the default format for tables created in Databricks
