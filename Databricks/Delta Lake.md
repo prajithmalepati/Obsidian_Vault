@@ -81,12 +81,13 @@ WHEN NOT MATCHED THEN INSERT *
 - When you have loads of data you want to add to the table without much Transformation, we can use something called `COPY INTO`
 	- `COPY INTO` is used to load data from external storage systems into Delta tables in Databricks.
 	- It provides efficient and scalable data ingestion capabilities.
-	- - Performance: Leverages distributed computing to parallelize data ingestion.
+	- Performance: Leverages distributed computing to parallelize data ingestion.
 	- Scalability: Handles data loads of various sizes efficiently.
 	- Fault Tolerance: Ensures data consistency and automatically retries on failures.
 	- Incremental Loading: Supports loading only new or updated data into existing tables.
 	- Schema Evolution: Adapts to changes in the source data schema.
 	- Data Validation: Allows specifying validation rules to ensure data integrity.
+	-  `COPY INTO` is idempotent.
 ```SQL
 COPY INTO delta.`/path/to/delta/table`
 FROM '<source_path>'

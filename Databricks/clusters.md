@@ -38,6 +38,8 @@ Only Admin users can Create, Edit and Delete a cluster policies and also have ac
 
 ### Cluster pools
 
+- mainly used to skip the starting time of a cluster
+
 
 
 
