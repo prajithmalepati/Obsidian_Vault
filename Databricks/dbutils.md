@@ -13,6 +13,7 @@
 2. **Notebook Utilities (`dbutils.notebook`)**: Helps in controlling and coordinating the execution of notebooks.
     
     - `dbutils.notebook.run(path, timeout_seconds, arguments)`: Runs another notebook within the current notebook, with an optional timeout and arguments.
+    - you can use the `.run` to send in arguments to the widgets in another notebook.
     - `dbutils.notebook.exit(value)`: Exits the current notebook with the specified return value.
 3. **Secret Management (`dbutils.secrets`)**: Provides functions to securely access secrets stored in Databricks Secret Scope.
     
