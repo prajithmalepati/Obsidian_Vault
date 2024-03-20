@@ -38,6 +38,11 @@ So to address this issues they developed Delta Lake
 - By default, **managed** tables in a schema without the location specified will be created in the **`dbfs:/user/hive/warehouse/<schema_name>.db/`** directory.
 - If you drop a managed table, The table's `directory` and its `log` and data files are deleted. Only the `schema (database)` directory remains.
 
+#### Writing data as a Delta table
+
+-  when we write data as a delta table, it creates the file in a number of `parquet` files and it also creates a folder named delta log that is filled with `json` files with all the metadata and commit information
+- This log files includes details such as the timestamp of the operation, the operation type, operation parameters, protocol versions, and metadata about the data being written (like schema information).
+
 #### Overwrite
 
 - you can also overwrites to atomically replace all the table in a table. Usually doing it this way is much faster as it doesn't need to list the directory recursively or delete any files.
