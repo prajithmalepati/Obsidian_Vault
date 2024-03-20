@@ -1,6 +1,6 @@
 # Obsidian_Vault
 
-- Made notes in Obsidian
+- My notes
 - Pyspark and Databricks for now
 
 ### Author
