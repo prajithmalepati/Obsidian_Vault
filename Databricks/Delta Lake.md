@@ -145,5 +145,7 @@ SET spark.databricks.delta.vacuum.logging.enabled = true;
 
 ### Z - Order
 
+- optimizing technique
+
 
 
