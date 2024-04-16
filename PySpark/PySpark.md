@@ -253,6 +253,11 @@ output
 '''
 ```
 
+- if you just want column names, we can use the `df.schema.names`
+
+```python
+colNames = df.schema.names
+```
 ### explode()
 
 - The `explode()` function in PySpark is used to transform an array column into multiple rows, one for each element in the array.
