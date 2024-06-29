@@ -340,6 +340,9 @@ df_category = df.withColumn('category',\
 							F.when(df.salary < 1000, 'bimbo')\
 							.when(df.age < 10000, 'poor')\
 							.otherwise('rich'))
+
+
+lmao
 ```
 
 * so when you `withColumn()` you can give the new column a name but when you use it with `select()` always follow it with an `alias()` too or else the name of the column would be the entire thing inside you `when()`
