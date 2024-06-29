@@ -428,7 +428,7 @@ df.filter(df.name.like('%John%'))
 ```python
 df_distinct = df.distinct()
 
-# with drop duplicates , you can specift the column names to check the duplicates 
+# with drop duplicates , you can specify  the column names to check the duplicates 
 df_distict = df.dropDuplicates([gender])
 ```
 
