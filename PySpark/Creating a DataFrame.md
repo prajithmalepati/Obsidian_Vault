@@ -1,4 +1,4 @@
-To create a DataFrame in pyspark, you can either create it with hardcode values on the go or load a file
+To create a DataFrame in pyspark, you can either create it with hardcoded values on the go or load a file
 
 ```python
 data = [(1,'ricky',23),((2,'nick',19))]
