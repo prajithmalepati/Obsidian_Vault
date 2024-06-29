@@ -149,8 +149,8 @@ df = auto_df.drop("horsepower")
 ### Get the size of a DataFrame
 
 ```python
-print("{} rows".format(df.count()))
-print("{} columns".format(len(df.columns)))
+print(f"{df.count()} rows")
+print(f"{len(df.columns) } columns")
 
 # Code snippet result:
 # 398 rows
