@@ -6,7 +6,7 @@
 
 ### Data Ingestion and Transformation:
 
-- [[Delta Lake]]: An open-source storage format providing reliability through [[ACID]] transactions and efficient data management. [[Delta Lake]] tables can serve as both raw and curated data sources for your pipelines.
+- [[Git_vault/Databricks/Delta Lake]]: An open-source storage format providing reliability through [[ACID]] transactions and efficient data management. [[Git_vault/Databricks/Delta Lake]] tables can serve as both raw and curated data sources for your pipelines.
 - **Structured Streaming**: Enables real-time data processing and stream processing capabilities, allowing you to work with continuously arriving data streams.
 - **ETL Pipelines**: Databricks provides tools like Delta Live Tables to simplify building and managing ETL pipelines for batch and streaming data. These pipelines can be declaratively defined, offering better code maintainability and facilitating error handling.
 

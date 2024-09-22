@@ -1,13 +1,13 @@
 - A cluster is a collection of Virtual Machine instances on which you can run Data Engineering, Data Science and Data Analytics workloads such as production ETL Pipelines, Streaming Analytics, Ad Hoc Analytics and Machine Learning.
 - Clusters allow you to treat a group of computers or worker nodes as a single computer orchestrated by a Driver node
-- [[Databricks]] provide two main type of clusters
+- [[Git_vault/Databricks/Databricks]] provide two main type of clusters
 	- **All-Purpose** - Clusters for interactive development
 		- Analyze data collaboratively using interactive notebooks.
 		- you can create an **All-purpose cluster** from a workspace or programmatically using CLI or REST API. 
 		- you can manually terminate and restart an **All-purpose** cluster.
 		- multiple users can share an **All-purpose** cluster to do collaborative and innovative analysis
 	- **Job** - clusters for automating workloads
-		- The [[Databricks]] job Scheduler creates job clusters when running jobs
+		- The [[Git_vault/Databricks/Databricks]] job Scheduler creates job clusters when running jobs
 		- you cannot restart a job cluster
 		- There are two types of cluster nodes
 			- Single node
@@ -16,7 +16,7 @@
 			- Standard (Multi Node)
 				- Default mode for workloads developed in any supported language (requires at least two VM instances) (1 Driver and 1 Worker )
 
-### [[Databricks]] Runtime Version
+### [[Git_vault/Databricks/Databricks]] Runtime Version
  **Standard**
  - Apache Spark and many other components and updates to provide an optimized big data analytics experiences
  
