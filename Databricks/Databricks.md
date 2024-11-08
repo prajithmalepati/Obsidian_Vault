@@ -49,5 +49,5 @@
 - **External table:** An External table is a table whose datafile is stored in a cloud storage location, outside of the managed storage location. So only the table meta data is managed. When you drop a table, only the table gets deleted and all the underlying data remains.
 
 
-### [[dbutils]]
+### [[Git_vault/Databricks/dbutils]]
 
